@@ -1,95 +1,43 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import styles from "./page.module.scss";
+import Carousel from "@/componentes/Carousel/Carousel";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className={styles.home}>
+      <Carousel />
+      <span>
+        Dégustez des produits frais tels que des viandes et poissons grillées au
+        charbon de bois, selon la tradition portugaise.
+      </span>
+      <div className={styles.restaurant}>
+        <div className={styles.text}>
+          <h2>Le Restaurant Janela vous accueille</h2>
+          <p>du mercredi au jeudi : 11H30 à 14H30 18H30 à 21H30</p>
+          <p>Du vendredi au dimanche 11H30 à 14H30 18h30 à 22H00</p>
+          <p>N’hésitez pas à réserver au 01 48 86 65 29</p>
+          <a href="http://#">En savoir plus</a>
+        </div>
+        <div className={styles.image}>
+          <Image src="/img/feu.jpg" fill alt="Picture of the author" />
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
+      <div className={styles.restaurant}>
+        <div className={styles.image}>
+          <Image src="/img/grill2b.gif" fill alt="Picture of the author" />
+        </div>
+        <div className={styles.text}>
+          <h2>Saveurs portugaises et engagement de qualité</h2>
           <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+            Tous nos produits sont frais, non surgelé afin de conserver toutes
+            leurs saveurs. <br />
+            Nos viandes sont d’origine française, excepté le gigot (Nouvelle
+            Zélande). <br />
+            Les frites, le riz les accompagnements ainsi que les condiments pour
+            la viande sont préparés maison.
           </p>
-        </a>
+        </div>
       </div>
-    </main>
-  )
+    </div>
+  );
 }
